@@ -1,0 +1,14 @@
+
+#con{
+    width:78%;
+
+}
+#home{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width:100vb;
+}
+.container{
+    width:100vb;
+}

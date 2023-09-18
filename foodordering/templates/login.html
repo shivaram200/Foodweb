@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenko</title>
+    <link rel="stylesheet" href="{% static 'foodord.css' %}">
+</head>
+<body>
+    <div class="center">
+        <div>
+            <style>
+                h5{
+                    color: red;
+                }
+            </style>
+            {% for message in messages %}
+            <h5>{{message}}</h5>
+            {% endfor %}
+        </div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="fr">
+
+                 <h2>Login</h2>
+                <div class="name">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="username" required>
+    
+                </div>
+                <div class="pass">
+                    <label for="passs">Password</label>
+                    <input type="password" name="password" id="passs">
+                </div>
+                <button class="sub" type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
